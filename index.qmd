@@ -77,10 +77,6 @@ Volcano Plot - Female vs Male DCM
 
 ![Volcano](images/Volcano Plot - Female vs Male control.png)
 
-Rplot
-
-Uploading Rplot.png…
-
 ### PC1 Distribution
 
 ![PC1](images/PC1 Distribution by Group.png)
