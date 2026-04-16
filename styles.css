@@ -7,11 +7,13 @@ body {
 }
 
 main.content {
-  background: white;
-  max-width: 950px;
-  margin: 2rem auto;
-  padding: 2.5rem;
-  border: 1px solid #e5e7eb;
+  background: #ffffff;
+  max-width: 980px;
+  margin: 2rem auto;   /* FIXED */
+  padding: 2.7rem 3rem;
+  border-radius: 22px;
+  box-shadow: 0 10px 30px rgba(15, 35, 55, 0.08);
+  border: 1px solid #ebf0f6;
 }
 
 h1 {
