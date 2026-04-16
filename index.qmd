@@ -55,35 +55,38 @@ The analysis pipeline includes:
 
 ## Visualizations
 
-### PCA Plot
+### PCA Plot - Sex Comparison
 
-![PCA](images/PCA Plot - Sex Comparison.png)
+![PCA Plot - Sex Comparison](images/PCA Plot - Sex Comparison.png)
 
-PCA Plot - Sex Comparison
+This PCA plot compares control and DCM samples by sex. It shows partial separation between disease groups, but there is still overlap between male and female samples, suggesting that sex-specific differences are present but not dominant.
 
-### UMAP Plot
+### UMAP Plot - Sex Comparison
 
-![UMAP](images/UMAP Plot - Sex Comparison.png)
+![UMAP Plot - Sex Comparison](images/UMAP Plot - Sex Comparison.png)
 
-UMAP Plot - Sex Comparison
+This UMAP plot provides another view of sample clustering. It shows slightly clearer grouping patterns than PCA, which suggests that some nonlinear structure exists in the data, although the groups are still not perfectly separated.
 
-### Volcano Plot (Female vs Male DCM)
+### Volcano Plot - Female vs Male DCM
 
-![Volcano](images/Volcano Plot - Female vs Male DCM.png)
+![Volcano Plot - Female vs Male DCM](images/Volcano Plot - Female vs Male DCM.png)
 
-Volcano Plot - Female vs Male DCM
+This volcano plot highlights genes that differ significantly between female and male DCM samples. It suggests that sex-specific gene expression differences are present in diseased hearts.
 
-### Volcano Plot (Female vs Male Control)
+### Volcano Plot - Female vs Male Control
 
-![Volcano](images/Volcano Plot - Female vs Male control.png)
+![Volcano Plot - Female vs Male Control](images/Volcano Plot - Female vs Male control.png)
+
+This volcano plot compares female and male control samples. Fewer gene differences are seen here compared to the DCM comparison, suggesting that sex effects are more noticeable in disease than in healthy tissue.
 
 ### PC1 Distribution
 
-![PC1](images/PC1 Distribution by Group.png)
+![PC1 Distribution](images/PC1 Distribution by Group.png)
 
-PC1 Distribution by Group
+This plot shows the distribution of PC1 values by group. It helps summarize how much of the major variation in the dataset is associated with differences between controls and DCM samples.
 
-## 🧬 KEGG Pathway Analysis
+
+##  KEGG Pathway Analysis
 
 KEGG enrichment analysis was performed on significantly differentially expressed genes to understand biological pathways involved in sex differences in DCM.
 
@@ -93,7 +96,7 @@ KEGG
 
 Barplot showing enriched pathways related to inflammation and metabolic processes in male vs female DCM samples.
 
-## 🔬 Key Findings
+##  Key Findings
 
 - DCM samples separate clearly from controls in PCA and UMAP
 - There are noticeable gene expression differences between male and female DCM hearts
@@ -134,7 +137,7 @@ Overall, the results suggest that DCM is associated with measurable changes in g
 
 This study demonstrates that DCM is associated with meaningful transcriptomic changes, particularly in pathways related to inflammation and remodeling. The observed sex-specific differences suggest that personalized approaches may be important in understanding and treating the disease.
 
-## Author
+## Authors
 
 Vaishnavi Madagiri  
 Bioinformatics Major — Virginia Commonwealth University
