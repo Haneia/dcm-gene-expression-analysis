@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>RNA-seq Analysis of Dilated Cardiomyopathy (DCM) – my-website</title>
+<title>RNAseq-DCM-GeneExpression-Analysis – my-website</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -114,12 +114,32 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#project-overview" id="toc-project-overview" class="nav-link active" data-scroll-target="#project-overview">Project Overview</a></li>
+  <li><a href="#rna-seq-analysis-using-gse141910" id="toc-rna-seq-analysis-using-gse141910" class="nav-link active" data-scroll-target="#rna-seq-analysis-using-gse141910">RNA-seq Analysis using GSE141910</a>
+  <ul class="collapse">
   <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction">Introduction</a></li>
   <li><a href="#research-question" id="toc-research-question" class="nav-link" data-scroll-target="#research-question">Research Question</a></li>
   <li><a href="#hypothesis" id="toc-hypothesis" class="nav-link" data-scroll-target="#hypothesis">Hypothesis</a></li>
-  <li><a href="#dataset" id="toc-dataset" class="nav-link" data-scroll-target="#dataset">Dataset</a></li>
-  <li><a href="#key-findings" id="toc-key-findings" class="nav-link" data-scroll-target="#key-findings">Key Findings</a></li>
+  <li><a href="#dataset-gse141910" id="toc-dataset-gse141910" class="nav-link" data-scroll-target="#dataset-gse141910">Dataset: GSE141910</a></li>
+  <li><a href="#methods" id="toc-methods" class="nav-link" data-scroll-target="#methods">Methods</a></li>
+  <li><a href="#visualizations" id="toc-visualizations" class="nav-link" data-scroll-target="#visualizations">Visualizations</a>
+  <ul class="collapse">
+  <li><a href="#pca-plot" id="toc-pca-plot" class="nav-link" data-scroll-target="#pca-plot">PCA Plot</a></li>
+  <li><a href="#umap-plot" id="toc-umap-plot" class="nav-link" data-scroll-target="#umap-plot">UMAP Plot</a></li>
+  <li><a href="#volcano-plot-female-vs-male-dcm" id="toc-volcano-plot-female-vs-male-dcm" class="nav-link" data-scroll-target="#volcano-plot-female-vs-male-dcm">Volcano Plot (Female vs Male DCM)</a></li>
+  <li><a href="#volcano-plot-female-vs-male-control" id="toc-volcano-plot-female-vs-male-control" class="nav-link" data-scroll-target="#volcano-plot-female-vs-male-control">Volcano Plot (Female vs Male Control)</a></li>
+  <li><a href="#pc1-distribution" id="toc-pc1-distribution" class="nav-link" data-scroll-target="#pc1-distribution">PC1 Distribution</a></li>
+  </ul></li>
+  <li><a href="#kegg-pathway-analysis" id="toc-kegg-pathway-analysis" class="nav-link" data-scroll-target="#kegg-pathway-analysis">🧬 KEGG Pathway Analysis</a>
+  <ul class="collapse">
+  <li><a href="#kegg-summary-barplot" id="toc-kegg-summary-barplot" class="nav-link" data-scroll-target="#kegg-summary-barplot">KEGG Summary Barplot</a></li>
+  </ul></li>
+  <li><a href="#key-findings" id="toc-key-findings" class="nav-link" data-scroll-target="#key-findings">🔬 Key Findings</a></li>
+  <li><a href="#discussion" id="toc-discussion" class="nav-link" data-scroll-target="#discussion">Discussion</a></li>
+  <li><a href="#tools-used" id="toc-tools-used" class="nav-link" data-scroll-target="#tools-used">Tools Used</a></li>
+  <li><a href="#limitations" id="toc-limitations" class="nav-link" data-scroll-target="#limitations">Limitations</a></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
+  <li><a href="#author" id="toc-author" class="nav-link" data-scroll-target="#author">Author</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -128,7 +148,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">RNA-seq Analysis of Dilated Cardiomyopathy (DCM)</h1>
+<h1 class="title">RNAseq-DCM-GeneExpression-Analysis</h1>
 </div>
 
 
@@ -145,50 +165,168 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="project-overview" class="level2">
-<h2 class="anchored" data-anchor-id="project-overview">Project Overview</h2>
-<p>This project analyzes gene expression differences in dilated cardiomyopathy (DCM) using RNA-seq data, with a focus on sex-specific effects.</p>
-</section>
+<section id="rna-seq-analysis-using-gse141910" class="level1">
+<h1>RNA-seq Analysis using GSE141910</h1>
+<p>Exploring gene expression differences in dilated cardiomyopathy (DCM) with a focus on sex-specific effects</p>
 <section id="introduction" class="level2">
 <h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
-<p>Dilated cardiomyopathy (DCM) is a condition where the heart becomes enlarged and weakened, reducing its ability to pump blood effectively. This can lead to heart failure, arrhythmias, and sudden cardiac death in severe cases.</p>
-<p>This project uses RNA-seq data to study gene expression changes in DCM compared to non-failing hearts and to determine whether these changes differ between males and females.</p>
+<p>Dilated cardiomyopathy (DCM) is a condition where the heart becomes enlarged and weakened, reducing its ability to pump blood effectively. This can lead to heart failure, arrhythmias, and in severe cases, sudden cardiac death. DCM is one of the leading causes of heart transplantation and can affect individuals at relatively young ages.</p>
+<p>The causes of DCM are complex and include genetic mutations, environmental factors, and unknown contributors. Because of this, studying the disease at the molecular level is important for understanding what is actually happening inside the heart.</p>
+<p>This project uses RNA-seq data to analyze gene expression changes in DCM compared to non-failing hearts. In addition, this project specifically explores whether these changes differ between males and females.</p>
 </section>
 <section id="research-question" class="level2">
 <h2 class="anchored" data-anchor-id="research-question">Research Question</h2>
-<p>Which genes and molecular pathways differ between males and females with dilated cardiomyopathy compared to non-failing hearts?</p>
+<p>Which genes and molecular pathways differ between males and females with dilated cardiomyopathy (DCM) compared to non-failing hearts?</p>
 </section>
 <section id="hypothesis" class="level2">
 <h2 class="anchored" data-anchor-id="hypothesis">Hypothesis</h2>
 <p>DCM hearts show distinct gene expression and pathway changes compared to non-failing hearts, with stronger inflammatory and remodeling signals. These effects are expected to differ between males and females.</p>
 </section>
-<section id="dataset" class="level2">
-<h2 class="anchored" data-anchor-id="dataset">Dataset</h2>
+<section id="dataset-gse141910" class="level2">
+<h2 class="anchored" data-anchor-id="dataset-gse141910">Dataset: GSE141910</h2>
+<p>RNA sequencing of the left ventricle from non-failing donors and heart failure samples from the MAGNet consortium.</p>
+<p>Total samples: 305</p>
+<p>Non-failing: 152</p>
+<p>70 males<br>
+82 females</p>
+<p>DCM: 153</p>
+<p>92 males<br>
+61 females</p>
+<p>GEO Accession: <a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE141910" class="uri">https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE141910</a></p>
+</section>
+<section id="methods" class="level2">
+<h2 class="anchored" data-anchor-id="methods">Methods</h2>
+<p>The analysis pipeline includes:</p>
 <ul>
-<li>GSE141910</li>
-<li>Total samples: 305</li>
-<li>Non-failing: 152
-<ul>
-<li>70 males</li>
-<li>82 females</li>
-</ul></li>
-<li>DCM: 153
-<ul>
-<li>92 males</li>
-<li>61 females</li>
-</ul></li>
+<li>Filtering low-count genes</li>
+<li>Log transformation of counts</li>
+<li>Principal Component Analysis (PCA)</li>
+<li>UMAP clustering</li>
+<li>Differential gene expression using limma</li>
+<li>Volcano plot visualization</li>
+<li>Sex-based comparison of DCM samples</li>
+<li>KEGG pathway enrichment analysis</li>
 </ul>
 </section>
+<section id="visualizations" class="level2">
+<h2 class="anchored" data-anchor-id="visualizations">Visualizations</h2>
+<section id="pca-plot" class="level3">
+<h3 class="anchored" data-anchor-id="pca-plot">PCA Plot</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/PCA Plot - Sex Comparison.png" class="img-fluid figure-img"></p>
+<figcaption>PCA</figcaption>
+</figure>
+</div>
+<p>PCA Plot - Sex Comparison</p>
+</section>
+<section id="umap-plot" class="level3">
+<h3 class="anchored" data-anchor-id="umap-plot">UMAP Plot</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/UMAP Plot - Sex Comparison.png" class="img-fluid figure-img"></p>
+<figcaption>UMAP</figcaption>
+</figure>
+</div>
+<p>UMAP Plot - Sex Comparison</p>
+</section>
+<section id="volcano-plot-female-vs-male-dcm" class="level3">
+<h3 class="anchored" data-anchor-id="volcano-plot-female-vs-male-dcm">Volcano Plot (Female vs Male DCM)</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/Volcano Plot - Female vs Male DCM.png" class="img-fluid figure-img"></p>
+<figcaption>Volcano</figcaption>
+</figure>
+</div>
+<p>Volcano Plot - Female vs Male DCM</p>
+</section>
+<section id="volcano-plot-female-vs-male-control" class="level3">
+<h3 class="anchored" data-anchor-id="volcano-plot-female-vs-male-control">Volcano Plot (Female vs Male Control)</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/Volcano Plot - Female vs Male control.png" class="img-fluid figure-img"></p>
+<figcaption>Volcano</figcaption>
+</figure>
+</div>
+<p>Rplot</p>
+<p>Uploading Rplot.png…</p>
+</section>
+<section id="pc1-distribution" class="level3">
+<h3 class="anchored" data-anchor-id="pc1-distribution">PC1 Distribution</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/PC1 Distribution by Group.png" class="img-fluid figure-img"></p>
+<figcaption>PC1</figcaption>
+</figure>
+</div>
+<p>PC1 Distribution by Group</p>
+</section>
+</section>
+<section id="kegg-pathway-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="kegg-pathway-analysis">🧬 KEGG Pathway Analysis</h2>
+<p>KEGG enrichment analysis was performed on significantly differentially expressed genes to understand biological pathways involved in sex differences in DCM.</p>
+<section id="kegg-summary-barplot" class="level3">
+<h3 class="anchored" data-anchor-id="kegg-summary-barplot">KEGG Summary Barplot</h3>
+<p>KEGG</p>
+<p>Barplot showing enriched pathways related to inflammation and metabolic processes in male vs female DCM samples.</p>
+</section>
+</section>
 <section id="key-findings" class="level2">
-<h2 class="anchored" data-anchor-id="key-findings">Key Findings</h2>
+<h2 class="anchored" data-anchor-id="key-findings">🔬 Key Findings</h2>
 <ul>
-<li>DCM samples separate from controls in PCA and UMAP</li>
-<li>Gene expression differences are present between male and female DCM hearts</li>
-<li>Inflammation and metabolism-related pathways are important</li>
-<li>Disease effects are stronger than sex effects</li>
+<li>DCM samples separate clearly from controls in PCA and UMAP</li>
+<li>There are noticeable gene expression differences between male and female DCM hearts</li>
+<li>Several genes are significantly upregulated in DCM</li>
+<li>KEGG analysis highlights pathways related to inflammation and metabolism</li>
+<li>These results suggest sex-specific biological differences in DCM progression</li>
 </ul>
+</section>
+<section id="discussion" class="level2">
+<h2 class="anchored" data-anchor-id="discussion">Discussion</h2>
+<p>The results from this analysis show that gene expression patterns in DCM differ from non-failing hearts, although the separation is not completely clear. In the PCA plot, there is some overlap between groups, which suggests that disease status is not the only factor influencing gene expression. This makes sense given how complex DCM is and how much variability exists between patients.</p>
+<p>The UMAP plot shows slightly clearer clustering compared to PCA, which suggests that there may be nonlinear patterns in the data that PCA is not capturing as well. Even so, the groups are still not perfectly separated, reinforcing the idea that multiple factors are contributing to the observed variation.</p>
+<p>The differential expression results highlight genes that are upregulated and downregulated in DCM. Many of these genes are likely involved in processes such as inflammation and cardiac remodeling, which are commonly associated with heart failure. This aligns with what is already known about the disease.</p>
+<p>There also appear to be differences between male and female samples, although these differences are not extremely distinct. This suggests that sex may play a role in how DCM develops or progresses, but it is probably not the only factor. More focused analysis would be needed to better understand these differences.</p>
+<p>Overall, the results suggest that DCM is associated with measurable changes in gene expression, but the patterns are complex and not driven by a single variable. This highlights the importance of considering multiple biological and clinical factors when studying the disease.</p>
+</section>
+<section id="tools-used" class="level2">
+<h2 class="anchored" data-anchor-id="tools-used">Tools Used</h2>
+<ul>
+<li>R</li>
+<li>GEOquery</li>
+<li>limma</li>
+<li>clusterProfiler</li>
+<li>org.Hs.eg.db</li>
+<li>umap</li>
+<li>data.table</li>
+</ul>
+</section>
+<section id="limitations" class="level2">
+<h2 class="anchored" data-anchor-id="limitations">Limitations</h2>
+<ul>
+<li>This analysis uses bulk RNA-seq data, so it doesn’t tell us which specific cell types the gene expression changes are coming from</li>
+<li>There is a lot of variability between patients (like disease stage or treatment history), and that isn’t fully accounted for here</li>
+<li>The sample sizes between groups aren’t perfectly balanced, which could affect some of the comparisons</li>
+<li>All results are based on a single dataset, so they would need to be validated using additional datasets to confirm the findings</li>
+</ul>
+</section>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
+<p>This study demonstrates that DCM is associated with meaningful transcriptomic changes, particularly in pathways related to inflammation and remodeling. The observed sex-specific differences suggest that personalized approaches may be important in understanding and treating the disease.</p>
+</section>
+<section id="author" class="level2">
+<h2 class="anchored" data-anchor-id="author">Author</h2>
+<p>Vaishnavi Madagiri<br>
+Bioinformatics Major — Virginia Commonwealth University</p>
+<p>Ammar Mohiuddin<br>
+Biology and Bioinformatics — Virginia Commonwealth University</p>
+<p>Harrish Ganesh<br>
+Biology and Bioinformatics — Virginia Commonwealth University</p>
+<p>Haneia Nemati<br>
+Bioinformatics — Virginia Commonwealth University</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
