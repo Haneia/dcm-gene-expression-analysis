@@ -1,7 +1,39 @@
 ---
-title: "my-website"
+title: "RNA-seq Analysis of Dilated Cardiomyopathy (DCM)"
 ---
 
-This is a Quarto website.
+## Project Overview
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+This project analyzes gene expression differences in dilated cardiomyopathy (DCM) using RNA-seq data, with a focus on sex-specific effects.
+
+## Introduction
+
+Dilated cardiomyopathy (DCM) is a condition where the heart becomes enlarged and weakened, reducing its ability to pump blood effectively. This can lead to heart failure, arrhythmias, and sudden cardiac death in severe cases.
+
+This project uses RNA-seq data to study gene expression changes in DCM compared to non-failing hearts and to determine whether these changes differ between males and females.
+
+## Research Question
+
+Which genes and molecular pathways differ between males and females with dilated cardiomyopathy compared to non-failing hearts?
+
+## Hypothesis
+
+DCM hearts show distinct gene expression and pathway changes compared to non-failing hearts, with stronger inflammatory and remodeling signals. These effects are expected to differ between males and females.
+
+## Dataset
+
+- GSE141910
+- Total samples: 305
+- Non-failing: 152
+  - 70 males
+  - 82 females
+- DCM: 153
+  - 92 males
+  - 61 females
+
+## Key Findings
+
+- DCM samples separate from controls in PCA and UMAP
+- Gene expression differences are present between male and female DCM hearts
+- Inflammation and metabolism-related pathways are important
+- Disease effects are stronger than sex effects
