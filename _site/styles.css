@@ -1,148 +1,75 @@
 body {
-  font-family: "Inter", "Segoe UI", Arial, sans-serif;
-  background: #f6f8fc;
-  color: #243447;
-  line-height: 1.75;
-  font-size: 17px;
+  font-family: Georgia, "Times New Roman", serif;
+  background-color: #f8f9fb;
+  color: #1f2937;
+  line-height: 1.8;
+  font-size: 18px;
 }
 
-/* navbar */
+main.content {
+  background: white;
+  max-width: 950px;
+  margin: 2rem auto;
+  padding: 2.5rem;
+  border: 1px solid #e5e7eb;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 0.5rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  color: #111827;
+  border-bottom: 1px solid #d1d5db;
+  padding-bottom: 0.4rem;
+}
+
+h3 {
+  font-size: 1.15rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.7rem;
+  color: #1f2937;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+ul, ol {
+  margin-bottom: 1rem;
+}
+
+img {
+  display: block;
+  max-width: 85%;
+  margin: 1.5rem auto;
+  border: 1px solid #d1d5db;
+  padding: 4px;
+  background: white;
+}
+
 .navbar {
-  background: #ffffff !important;
-  border-bottom: 1px solid #e5ebf3;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+  background: white !important;
+  border-bottom: 1px solid #e5e7eb;
 }
 
 .navbar-brand,
 .navbar-nav .nav-link {
-  color: #183b67 !important;
+  color: #111827 !important;
   font-weight: 600;
 }
 
-/* hero banner */
-.quarto-title-banner {
-  background: linear-gradient(135deg, #eef4fb 0%, #f7f9fd 60%, #eef2f8 100%);
-  padding-top: 3.5rem !important;
-  padding-bottom: 3.5rem !important;
-  border-bottom: 1px solid #e3eaf3;
-}
-
-.quarto-title .title {
-  text-align: center;
-  font-size: 3rem;
-  font-weight: 800;
-  color: #183b67;
-  letter-spacing: -0.03em;
-  margin-bottom: 1rem;
-}
-
-.quarto-title p,
-.quarto-title .subtitle {
-  text-align: center;
-  font-size: 1.15rem;
-  color: #4f6580;
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-/* main content card */
-main.content {
-  background: #ffffff;
-  max-width: 980px;
-  margin: -2.2rem auto 2rem auto;
-  padding: 2.7rem 3rem;
-  border-radius: 22px;
-  box-shadow: 0 10px 30px rgba(15, 35, 55, 0.08);
-  border: 1px solid #ebf0f6;
-  position: relative;
-  z-index: 2;
-}
-
-/* headings */
-h1, h2, h3 {
-  color: #183b67;
-  font-weight: 750;
-}
-
-h2 {
-  margin-top: 2.7rem;
-  margin-bottom: 1rem;
-  font-size: 1.85rem;
-  border-bottom: 2px solid #e6edf5;
-  padding-bottom: 0.45rem;
-}
-
-h3 {
-  margin-top: 1.7rem;
-  margin-bottom: 0.8rem;
-  font-size: 1.3rem;
-}
-
-/* paragraphs and lists */
-p {
-  margin-bottom: 1rem;
-  color: #31475f;
-}
-
-ul, ol {
-  margin-bottom: 1.1rem;
-}
-
-li {
-  margin-bottom: 0.35rem;
-}
-
-/* images */
-img {
-  display: block;
-  max-width: 88%;
-  margin: 1.6rem auto;
-  border-radius: 16px;
-  box-shadow: 0 8px 24px rgba(20, 40, 70, 0.12);
-  border: 1px solid #e3eaf3;
-  background: white;
-  padding: 0.4rem;
-}
-
-/* toc card on right */
 #TOC,
 .sidebar nav[role="doc-toc"] {
-  background: #ffffff;
-  border: 1px solid #e5ebf3;
-  border-radius: 18px;
-  padding: 1rem 1.1rem;
-  box-shadow: 0 8px 22px rgba(15, 35, 55, 0.06);
-}
-
-#TOC .nav-link.active,
-.sidebar .nav-link.active {
-  color: #1f5f99;
-  font-weight: 700;
-}
-
-/* links */
-a {
-  color: #245f97;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-/* mobile */
-@media (max-width: 768px) {
-  .quarto-title .title {
-    font-size: 2.2rem;
-  }
-
-  main.content {
-    margin: -1rem 1rem 1.5rem 1rem;
-    padding: 1.5rem;
-    border-radius: 16px;
-  }
-
-  img {
-    max-width: 100%;
-  }
+  background: white;
+  border: 1px solid #e5e7eb;
+  padding: 1rem;
+  font-size: 0.95rem;
 }
