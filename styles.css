@@ -1,1 +1,100 @@
-/* css styles */
+body {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.75;
+  background-color: #f6f8fb;
+  color: #243447;
+  font-size: 17px;
+}
+
+/* Main page area */
+main.content {
+  background: white;
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 2.5rem 3rem;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+}
+
+/* Page title */
+h1 {
+  text-align: center;
+  font-size: 2.6em;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #163a63;
+}
+
+/* General text */
+p {
+  font-size: 1.05em;
+  margin-bottom: 1rem;
+}
+
+/* Make each section clearly separated */
+h2 {
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  padding: 0.7rem 1rem;
+  background-color: #eef4fb;
+  border-left: 6px solid #2c7be5;
+  border-radius: 8px;
+  color: #163a63;
+  font-size: 1.5em;
+}
+
+/* Subsections */
+h3 {
+  margin-top: 2rem;
+  margin-bottom: 0.8rem;
+  color: #244e7a;
+  font-size: 1.2em;
+}
+
+/* Lists */
+ul, ol {
+  margin-bottom: 1.2rem;
+}
+
+li {
+  margin-bottom: 0.4rem;
+}
+
+/* Images */
+img {
+  display: block;
+  margin: 20px auto;
+  border-radius: 12px;
+  max-width: 85%;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.10);
+  background: white;
+  padding: 6px;
+}
+
+/* Navbar */
+.navbar {
+  border-bottom: 1px solid #dde6f0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+}
+
+.navbar-brand,
+.navbar-nav .nav-link {
+  font-weight: 600;
+  color: #163a63 !important;
+}
+
+/* TOC */
+#TOC, .sidebar nav[role="doc-toc"] {
+  background: white;
+  border: 1px solid #dde6f0;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+/* Horizontal spacing */
+hr {
+  border: none;
+  border-top: 1px solid #dde6f0;
+  margin: 2rem 0;
+}/* css styles */
