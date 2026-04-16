@@ -4,11 +4,15 @@ project:
 website:
   title: "RNAseq-DCM-GeneExpression-Analysis"
   navbar:
+    background: white
     left:
       - text: Home
         file: index.qmd
       - text: About
         file: about.qmd
+    right:
+      - icon: github
+        href: https://github.com/Haneia/dcm-gene-expression-analysis
 
 format:
   html:
@@ -16,6 +20,6 @@ format:
     css: styles.css
     toc: true
     toc-location: right
-    page-layout: article
+    page-layout: full
 
 
