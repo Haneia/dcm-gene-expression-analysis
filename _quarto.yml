@@ -15,7 +15,7 @@ format:
     theme: cosmo
     toc: true
     toc-location: right
-    page-layout: full
+    page-layout: article
     css: styles.css
 
 
