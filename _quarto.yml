@@ -1,0 +1,33 @@
+project:
+  type: website
+  output-dir: docs
+
+bibliography: references.bib
+
+website:
+  title: "RNA-seq Analysis of Dilated Cardiomyopathy"
+  
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: proposal.qmd
+        text: Proposal
+      - href: results.qmd
+        text: Results
+      - href: team.qmd
+        text: Team
+  page-footer:
+    left: "BNFO 420 • VCU"
+    right: "Built with Quarto"
+
+format:
+  html:
+    theme: cosmo
+    toc: true
+    number-sections: true
+
+execute:
+  echo: true
+  warning: false
+  message: false

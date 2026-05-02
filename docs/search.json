@@ -1,0 +1,177 @@
+[
+  {
+    "objectID": "proposal.html",
+    "href": "proposal.html",
+    "title": "Proposal",
+    "section": "",
+    "text": "How does gene expression differ between male and female patients with dilated cardiomyopathy (DCM), and which biological pathways are most affected?\n\n\n\n\n\nSource: Gene Expression Omnibus (GEO), dataset GSE141910\nDataset description: RNA sequencing of left ventricle tissue from non-failing donors and heart failure samples from the MAGNet consortium\n\nSample size: 305 total samples\n\nNon-failing: 152 samples\n\n70 males\n\n82 females\n\n\nDCM: 153 samples\n\n92 males\n\n61 females\n\n\n\nKey variables: Sex, disease condition, and RNA-seq gene expression levels\n\nLicense/usage notes: Publicly available dataset for research use through GEO\n\n\n\n\n\nThe analysis pipeline includes:\n\nFiltering low-count genes\n\nLog transformation of counts\n\nPrincipal Component Analysis (PCA)\n\nUMAP clustering\n\nDifferential gene expression analysis using limma\n\nVolcano plot visualization\n\nSex-based comparison of DCM samples\n\nKEGG pathway enrichment analysis\n\n\n\n\n\n\nPCA plot comparing control and DCM samples by sex\n\nUMAP plot showing nonlinear clustering patterns\n\nVolcano plot comparing female vs male DCM samples\n\nVolcano plot comparing female vs male control samples\n\nPC1 distribution plot showing major variation across groups\n\nKEGG pathway summary plot for Female DCM vs Male DCM\n\n\n\n\n\n\nA Quarto website presenting the project results\n\nFigures including PCA, UMAP, volcano plots, PC1 distribution, and KEGG pathway plot\n\nSummary of key gene expression differences\n\nInterpretation of sex-specific differences in DCM\n\nDiscussion of limitations and biological meaning"
+  },
+  {
+    "objectID": "proposal.html#research-question",
+    "href": "proposal.html#research-question",
+    "title": "Proposal",
+    "section": "",
+    "text": "How does gene expression differ between male and female patients with dilated cardiomyopathy (DCM), and which biological pathways are most affected?"
+  },
+  {
+    "objectID": "proposal.html#dataset",
+    "href": "proposal.html#dataset",
+    "title": "Proposal",
+    "section": "",
+    "text": "Source: Gene Expression Omnibus (GEO), dataset GSE141910\nDataset description: RNA sequencing of left ventricle tissue from non-failing donors and heart failure samples from the MAGNet consortium\n\nSample size: 305 total samples\n\nNon-failing: 152 samples\n\n70 males\n\n82 females\n\n\nDCM: 153 samples\n\n92 males\n\n61 females\n\n\n\nKey variables: Sex, disease condition, and RNA-seq gene expression levels\n\nLicense/usage notes: Publicly available dataset for research use through GEO"
+  },
+  {
+    "objectID": "proposal.html#planned-analysis",
+    "href": "proposal.html#planned-analysis",
+    "title": "Proposal",
+    "section": "",
+    "text": "The analysis pipeline includes:\n\nFiltering low-count genes\n\nLog transformation of counts\n\nPrincipal Component Analysis (PCA)\n\nUMAP clustering\n\nDifferential gene expression analysis using limma\n\nVolcano plot visualization\n\nSex-based comparison of DCM samples\n\nKEGG pathway enrichment analysis"
+  },
+  {
+    "objectID": "proposal.html#expected-visualizations",
+    "href": "proposal.html#expected-visualizations",
+    "title": "Proposal",
+    "section": "",
+    "text": "PCA plot comparing control and DCM samples by sex\n\nUMAP plot showing nonlinear clustering patterns\n\nVolcano plot comparing female vs male DCM samples\n\nVolcano plot comparing female vs male control samples\n\nPC1 distribution plot showing major variation across groups\n\nKEGG pathway summary plot for Female DCM vs Male DCM"
+  },
+  {
+    "objectID": "proposal.html#deliverables",
+    "href": "proposal.html#deliverables",
+    "title": "Proposal",
+    "section": "",
+    "text": "A Quarto website presenting the project results\n\nFigures including PCA, UMAP, volcano plots, PC1 distribution, and KEGG pathway plot\n\nSummary of key gene expression differences\n\nInterpretation of sex-specific differences in DCM\n\nDiscussion of limitations and biological meaning"
+  },
+  {
+    "objectID": "results.html",
+    "href": "results.html",
+    "title": "Results",
+    "section": "",
+    "text": "DCM samples show stronger gene expression differences than sex alone.\nSex differences are present but more noticeable in DCM samples.\nPCA and UMAP show partial clustering between groups.\nKEGG analysis highlights pathways related to inflammation and metabolism.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThis PCA plot compares control and DCM samples by sex. Each point is one sample. The plot shows some separation between disease groups, but there is still overlap, meaning sex-specific differences are present but not the only factor affecting gene expression.\n\n\n\n\n\n\n\n\n\n\nThis UMAP plot provides another view of sample clustering. It shows nonlinear patterns in the data that PCA may not capture as clearly. The groups are not perfectly separated, which suggests that multiple biological factors are influencing the expression patterns.\n\n\n\n\n\n\n\n\n\n\nThis volcano plot compares female and male DCM samples. Points farther left or right show stronger sex-based expression differences. Colored points represent genes that are higher in females or higher in males, suggesting that DCM may affect gene expression differently by sex.\n\n\n\n\n\n\n\n\n\n\nThis volcano plot compares female and male control samples. Compared to the DCM volcano plot, fewer strong differences are expected here. This supports the idea that sex-based gene expression differences may become more noticeable in disease.\n\n\n\n\n\n\n\n\n\n\nThis boxplot shows how PC1 values are distributed across each group. PC1 represents the largest source of variation in the dataset. Differences between groups suggest that disease status and sex may contribute to major gene expression variation.\n\n\n\n\nKEGG enrichment analysis was performed on significantly differentially expressed genes to understand biological pathways involved in sex differences in DCM.\n\n\n\n\n\n\n\n\n\nThis interactive KEGG plot shows the top enriched pathways from the Female DCM vs Male DCM comparison. Larger points represent pathways with more significant genes, and the color represents the adjusted p-value. This helps connect gene expression differences to larger biological pathways.\n\n\n\n\nOverall, the results suggest that DCM is associated with meaningful gene expression changes. Sex-specific differences are present, especially in DCM samples, but they are not the only factor driving variation. The KEGG pathway results help connect these gene-level differences to broader biological processes such as inflammation, metabolism, and cardiac remodeling."
+  },
+  {
+    "objectID": "results.html#key-findings",
+    "href": "results.html#key-findings",
+    "title": "Results",
+    "section": "",
+    "text": "DCM samples show stronger gene expression differences than sex alone.\nSex differences are present but more noticeable in DCM samples.\nPCA and UMAP show partial clustering between groups.\nKEGG analysis highlights pathways related to inflammation and metabolism."
+  },
+  {
+    "objectID": "results.html#pca-plot---sex-comparison",
+    "href": "results.html#pca-plot---sex-comparison",
+    "title": "Results",
+    "section": "",
+    "text": "This PCA plot compares control and DCM samples by sex. Each point is one sample. The plot shows some separation between disease groups, but there is still overlap, meaning sex-specific differences are present but not the only factor affecting gene expression."
+  },
+  {
+    "objectID": "results.html#umap-plot---sex-comparison",
+    "href": "results.html#umap-plot---sex-comparison",
+    "title": "Results",
+    "section": "",
+    "text": "This UMAP plot provides another view of sample clustering. It shows nonlinear patterns in the data that PCA may not capture as clearly. The groups are not perfectly separated, which suggests that multiple biological factors are influencing the expression patterns."
+  },
+  {
+    "objectID": "results.html#volcano-plot---female-vs-male-dcm",
+    "href": "results.html#volcano-plot---female-vs-male-dcm",
+    "title": "Results",
+    "section": "",
+    "text": "This volcano plot compares female and male DCM samples. Points farther left or right show stronger sex-based expression differences. Colored points represent genes that are higher in females or higher in males, suggesting that DCM may affect gene expression differently by sex."
+  },
+  {
+    "objectID": "results.html#volcano-plot---female-vs-male-control",
+    "href": "results.html#volcano-plot---female-vs-male-control",
+    "title": "Results",
+    "section": "",
+    "text": "This volcano plot compares female and male control samples. Compared to the DCM volcano plot, fewer strong differences are expected here. This supports the idea that sex-based gene expression differences may become more noticeable in disease."
+  },
+  {
+    "objectID": "results.html#pc1-distribution",
+    "href": "results.html#pc1-distribution",
+    "title": "Results",
+    "section": "",
+    "text": "This boxplot shows how PC1 values are distributed across each group. PC1 represents the largest source of variation in the dataset. Differences between groups suggest that disease status and sex may contribute to major gene expression variation."
+  },
+  {
+    "objectID": "results.html#kegg-pathway-analysis",
+    "href": "results.html#kegg-pathway-analysis",
+    "title": "Results",
+    "section": "",
+    "text": "KEGG enrichment analysis was performed on significantly differentially expressed genes to understand biological pathways involved in sex differences in DCM."
+  },
+  {
+    "objectID": "results.html#kegg-summary-plot---female-dcm-vs-male-dcm",
+    "href": "results.html#kegg-summary-plot---female-dcm-vs-male-dcm",
+    "title": "Results",
+    "section": "",
+    "text": "This interactive KEGG plot shows the top enriched pathways from the Female DCM vs Male DCM comparison. Larger points represent pathways with more significant genes, and the color represents the adjusted p-value. This helps connect gene expression differences to larger biological pathways."
+  },
+  {
+    "objectID": "results.html#interpretation",
+    "href": "results.html#interpretation",
+    "title": "Results",
+    "section": "",
+    "text": "Overall, the results suggest that DCM is associated with meaningful gene expression changes. Sex-specific differences are present, especially in DCM samples, but they are not the only factor driving variation. The KEGG pathway results help connect these gene-level differences to broader biological processes such as inflammation, metabolism, and cardiac remodeling."
+  },
+  {
+    "objectID": "team.html",
+    "href": "team.html",
+    "title": "Team",
+    "section": "",
+    "text": "Vaishnavi Madagiri- EDA, Data cleaning\nAmmar Mohiuddin - Writting\nHarrish Ganesh - EDA, Data cleaning\nHaneia Nemati - Modeling"
+  },
+  {
+    "objectID": "team.html#members",
+    "href": "team.html#members",
+    "title": "Team",
+    "section": "",
+    "text": "Vaishnavi Madagiri- EDA, Data cleaning\nAmmar Mohiuddin - Writting\nHarrish Ganesh - EDA, Data cleaning\nHaneia Nemati - Modeling"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "RNAseq Analysis using GSE141910",
+    "section": "",
+    "text": "Dilated cardiomyopathy (DCM) is a condition in which the heart becomes enlarged and weakened, reducing its ability to pump blood effectively. Over time, this impaired function can lead to heart failure, arrhythmias, and in severe cases, sudden cardiac death. DCM is one of the most common indications for heart transplantation worldwide and often affects individuals during early or middle adulthood, making it a major contributor to long-term cardiovascular morbidity (Hershberger et al., 2013; McKenna et al., 2017).\nThe causes of DCM are complex and involve a combination of genetic and environmental factors. A significant proportion of cases are linked to inherited mutations in genes that affect cardiac structure and function, particularly those involved in the cytoskeleton, sarcomere, and nuclear envelope. At the same time, non-genetic factors such as viral infections, toxins, and metabolic stress can also contribute to disease development. Despite these known associations, many cases remain idiopathic, highlighting gaps in understanding the underlying mechanisms driving disease progression (Hershberger et al., 2013).\nBecause of this complexity, studying DCM at the molecular level is essential for identifying the biological pathways that are disrupted in failing hearts. Transcriptomic approaches such as RNA sequencing (RNA-seq) allow for a comprehensive view of gene expression changes, providing insight into processes like inflammation, fibrosis, and altered metabolism that are often implicated in cardiac dysfunction. These large-scale analyses have become an important tool for uncovering patterns that are not visible through traditional clinical or histological approaches (Margulies et al., 2016).\nThis project uses RNA-seq data to compare gene expression in DCM and non-failing heart tissue, with the goal of identifying key molecular differences associated with disease. In addition, this study explores whether these gene expression patterns differ between males and females. Sex-based differences in cardiovascular disease have been increasingly recognized, with evidence suggesting that biological sex can influence disease presentation, progression, and underlying molecular pathways. Understanding these differences may provide more targeted insights into DCM and support the development of more personalized approaches to treatment (Regitz-Zagrosek, 2012)."
+  },
+  {
+    "objectID": "index.html#introduction",
+    "href": "index.html#introduction",
+    "title": "RNAseq Analysis using GSE141910",
+    "section": "",
+    "text": "Dilated cardiomyopathy (DCM) is a condition in which the heart becomes enlarged and weakened, reducing its ability to pump blood effectively. Over time, this impaired function can lead to heart failure, arrhythmias, and in severe cases, sudden cardiac death. DCM is one of the most common indications for heart transplantation worldwide and often affects individuals during early or middle adulthood, making it a major contributor to long-term cardiovascular morbidity (Hershberger et al., 2013; McKenna et al., 2017).\nThe causes of DCM are complex and involve a combination of genetic and environmental factors. A significant proportion of cases are linked to inherited mutations in genes that affect cardiac structure and function, particularly those involved in the cytoskeleton, sarcomere, and nuclear envelope. At the same time, non-genetic factors such as viral infections, toxins, and metabolic stress can also contribute to disease development. Despite these known associations, many cases remain idiopathic, highlighting gaps in understanding the underlying mechanisms driving disease progression (Hershberger et al., 2013).\nBecause of this complexity, studying DCM at the molecular level is essential for identifying the biological pathways that are disrupted in failing hearts. Transcriptomic approaches such as RNA sequencing (RNA-seq) allow for a comprehensive view of gene expression changes, providing insight into processes like inflammation, fibrosis, and altered metabolism that are often implicated in cardiac dysfunction. These large-scale analyses have become an important tool for uncovering patterns that are not visible through traditional clinical or histological approaches (Margulies et al., 2016).\nThis project uses RNA-seq data to compare gene expression in DCM and non-failing heart tissue, with the goal of identifying key molecular differences associated with disease. In addition, this study explores whether these gene expression patterns differ between males and females. Sex-based differences in cardiovascular disease have been increasingly recognized, with evidence suggesting that biological sex can influence disease presentation, progression, and underlying molecular pathways. Understanding these differences may provide more targeted insights into DCM and support the development of more personalized approaches to treatment (Regitz-Zagrosek, 2012)."
+  },
+  {
+    "objectID": "index.html#references",
+    "href": "index.html#references",
+    "title": "RNAseq Analysis using GSE141910",
+    "section": "2 References",
+    "text": "2 References\nHershberger, R. E., Hedges, D. J., & Morales, A. (2013). Dilated cardiomyopathy: The complexity of a diverse genetic architecture. Nature Reviews Cardiology, 10(9), 531–547.\nMargulies, K. B., Hernandez, A. F., Redfield, M. M., et al. (2016). Effects of liraglutide on clinical stability among patients with advanced heart failure and reduced ejection fraction. JAMA, 316(5), 500–508.\nMcKenna, W. J., Maron, B. J., & Thiene, G. (2017). Classification, epidemiology, and global burden of cardiomyopathies. Circulation Research, 121(7), 722–730.\nRegitz-Zagrosek, V. (2012). Sex and gender differences in health. EMBO Reports, 13(7), 596–603."
+  },
+  {
+    "objectID": "index.html#research-question",
+    "href": "index.html#research-question",
+    "title": "RNAseq Analysis using GSE141910",
+    "section": "3 Research Question",
+    "text": "3 Research Question\nWhich genes and molecular pathways differ between males and females with dilated cardiomyopathy (DCM) compared to non-failing hearts?"
+  },
+  {
+    "objectID": "index.html#hypothesis",
+    "href": "index.html#hypothesis",
+    "title": "RNAseq Analysis using GSE141910",
+    "section": "4 Hypothesis",
+    "text": "4 Hypothesis\nDCM hearts show distinct gene expression and pathway changes compared to non-failing hearts, with stronger inflammatory and remodeling signals. These effects are expected to differ between males and females."
+  },
+  {
+    "objectID": "index.html#references-1",
+    "href": "index.html#references-1",
+    "title": "RNAseq Analysis using GSE141910",
+    "section": "5 References",
+    "text": "5 References\nHershberger, R. E., Hedges, D. J., & Morales, A. (2013). Dilated cardiomyopathy: The complexity of a diverse genetic architecture. Nature Reviews Cardiology, 10(9), 531–547.\nMargulies, K. B., Hernandez, A. F., Redfield, M. M., et al. (2016). Effects of liraglutide on clinical stability among patients with advanced heart failure and reduced ejection fraction. JAMA, 316(5), 500–508.\nMcKenna, W. J., Maron, B. J., & Thiene, G. (2017). Classification, epidemiology, and global burden of cardiomyopathies. Circulation Research, 121(7), 722–730.\nRegitz-Zagrosek, V. (2012). Sex and gender differences in health. EMBO Reports, 13(7), 596–603."
+  },
+  {
+    "objectID": "index.html#authors",
+    "href": "index.html#authors",
+    "title": "RNAseq Analysis using GSE141910",
+    "section": "6 Authors",
+    "text": "6 Authors\nVaishnavi Madagiri — Virginia Commonwealth University\nAmmar Mohiuddin — Virginia Commonwealth University\nHarrish Ganesh — Virginia Commonwealth University\nHaneia Nemati — Virginia Commonwealth University"
+  }
+]
