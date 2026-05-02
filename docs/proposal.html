@@ -121,14 +121,10 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#proposal" id="toc-proposal" class="nav-link active" data-scroll-target="#proposal"><span class="header-section-number">1</span> Proposal</a>
-  <ul class="collapse">
-  <li><a href="#research-question" id="toc-research-question" class="nav-link" data-scroll-target="#research-question"><span class="header-section-number">1.1</span> Research question</a></li>
-  <li><a href="#dataset" id="toc-dataset" class="nav-link" data-scroll-target="#dataset"><span class="header-section-number">1.2</span> Dataset</a></li>
-  <li><a href="#planned-analysis" id="toc-planned-analysis" class="nav-link" data-scroll-target="#planned-analysis"><span class="header-section-number">1.3</span> Planned analysis</a></li>
-  <li><a href="#expected-visualizations" id="toc-expected-visualizations" class="nav-link" data-scroll-target="#expected-visualizations"><span class="header-section-number">1.4</span> Expected visualizations</a></li>
-  <li><a href="#deliverables" id="toc-deliverables" class="nav-link" data-scroll-target="#deliverables"><span class="header-section-number">1.5</span> Deliverables</a></li>
-  </ul></li>
+  <li><a href="#research-question" id="toc-research-question" class="nav-link active" data-scroll-target="#research-question"><span class="header-section-number">1</span> Research question</a></li>
+  <li><a href="#datasets" id="toc-datasets" class="nav-link" data-scroll-target="#datasets"><span class="header-section-number">2</span> Dataset(s)</a></li>
+  <li><a href="#planned-analysis" id="toc-planned-analysis" class="nav-link" data-scroll-target="#planned-analysis"><span class="header-section-number">3</span> Planned analysis</a></li>
+  <li><a href="#deliverables" id="toc-deliverables" class="nav-link" data-scroll-target="#deliverables"><span class="header-section-number">4</span> Deliverables</a></li>
   </ul>
 </nav>
     </div>
@@ -154,97 +150,105 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="proposal" class="level1" data-number="1">
-<h1 data-number="1"><span class="header-section-number">1</span> Proposal</h1>
-<section id="research-question" class="level2" data-number="1.1">
-<h2 data-number="1.1" class="anchored" data-anchor-id="research-question"><span class="header-section-number">1.1</span> Research question</h2>
-<p>How does gene expression differ between male and female patients with dilated cardiomyopathy (DCM), and which biological pathways are most affected?</p>
+<section id="research-question" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="research-question"><span class="header-section-number">1</span> Research question</h2>
+<p>Dilated cardiomyopathy (DCM) is a complex heart disease influenced by both genetic and environmental factors. In this project, we analyze publicly available RNA-seq data to evaluate how gene expression differs between male and female patients with DCM and identify the biological pathways most affected by disease and sex differences.</p>
 <hr>
 </section>
-<section id="dataset" class="level2" data-number="1.2">
-<h2 data-number="1.2" class="anchored" data-anchor-id="dataset"><span class="header-section-number">1.2</span> Dataset</h2>
+<section id="datasets" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="datasets"><span class="header-section-number">2</span> Dataset(s)</h2>
 <ul>
-<li><strong>Source:</strong> Gene Expression Omnibus (GEO), dataset <a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE141910">GSE141910</a></li>
-<li><strong>Dataset description:</strong> RNA sequencing of left ventricle tissue from non-failing donors and heart failure samples from the MAGNet consortium<br>
+<li><strong>Source:</strong> Gene Expression Omnibus (GEO), dataset GSE141910<br>
 </li>
 <li><strong>Sample size:</strong> 305 total samples
 <ul>
-<li>Non-failing: 152 samples
-<ul>
-<li>70 males<br>
+<li>Non-failing: 152 (70 males, 82 females)<br>
 </li>
-<li>82 females<br>
+<li>DCM: 153 (92 males, 61 females)<br>
 </li>
 </ul></li>
-<li>DCM: 153 samples
-<ul>
-<li>92 males<br>
-</li>
-<li>61 females<br>
-</li>
-</ul></li>
-</ul></li>
-<li><strong>Key variables:</strong> Sex, disease condition, and RNA-seq gene expression levels<br>
+<li><strong>Key variables:</strong> Sex, disease condition (DCM vs control), RNA-seq gene expression levels<br>
 </li>
 <li><strong>License/usage notes:</strong> Publicly available dataset for research use through GEO</li>
 </ul>
 <hr>
 </section>
-<section id="planned-analysis" class="level2" data-number="1.3">
-<h2 data-number="1.3" class="anchored" data-anchor-id="planned-analysis"><span class="header-section-number">1.3</span> Planned analysis</h2>
-<p>The analysis pipeline includes:</p>
+<section id="planned-analysis" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="planned-analysis"><span class="header-section-number">3</span> Planned analysis</h2>
 <ul>
-<li>Filtering low-count genes<br>
+<li><strong>Cleaning/QC</strong>
+<ul>
+<li>Filter low-count genes to reduce noise<br>
 </li>
-<li>Log transformation of counts<br>
+<li>Normalize and log-transform gene expression data</li>
+</ul></li>
+<li><strong>Visualizations</strong>
+<ul>
+<li>Principal Component Analysis (PCA) to assess global variation<br>
 </li>
-<li>Principal Component Analysis (PCA)<br>
+<li>UMAP to visualize clustering patterns<br>
 </li>
-<li>UMAP clustering<br>
+<li>Volcano plots for differential gene expression<br>
 </li>
-<li>Differential gene expression analysis using limma<br>
+<li>PC1 distribution plots</li>
+</ul></li>
+<li><strong>Statistical/ML approach</strong>
+<ul>
+<li>Differential gene expression analysis using the limma package<br>
 </li>
-<li>Volcano plot visualization<br>
+<li>Identify significantly upregulated and downregulated genes<br>
 </li>
-<li>Sex-based comparison of DCM samples<br>
+<li>KEGG pathway enrichment analysis to identify biological pathways</li>
+</ul></li>
+<li><strong>How you’ll validate</strong>
+<ul>
+<li>Compare multiple groups (DCM vs control, male vs female)<br>
 </li>
-<li>KEGG pathway enrichment analysis</li>
+<li>Evaluate consistency across PCA and UMAP clustering<br>
+</li>
+<li>Use adjusted p-values (FDR) to control for multiple testing</li>
+</ul></li>
 </ul>
 <hr>
 </section>
-<section id="expected-visualizations" class="level2" data-number="1.4">
-<h2 data-number="1.4" class="anchored" data-anchor-id="expected-visualizations"><span class="header-section-number">1.4</span> Expected visualizations</h2>
+<section id="deliverables" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="deliverables"><span class="header-section-number">4</span> Deliverables</h2>
 <ul>
-<li>PCA plot comparing control and DCM samples by sex<br>
-</li>
-<li>UMAP plot showing nonlinear clustering patterns<br>
-</li>
-<li>Volcano plot comparing female vs male DCM samples<br>
-</li>
-<li>Volcano plot comparing female vs male control samples<br>
-</li>
-<li>PC1 distribution plot showing major variation across groups<br>
-</li>
-<li>KEGG pathway summary plot for Female DCM vs Male DCM</li>
-</ul>
-<hr>
-</section>
-<section id="deliverables" class="level2" data-number="1.5">
-<h2 data-number="1.5" class="anchored" data-anchor-id="deliverables"><span class="header-section-number">1.5</span> Deliverables</h2>
+<li><strong>Website sections</strong>
 <ul>
-<li>A Quarto website presenting the project results<br>
+<li>Introduction<br>
 </li>
-<li>Figures including PCA, UMAP, volcano plots, PC1 distribution, and KEGG pathway plot<br>
+<li>Methods<br>
 </li>
-<li>Summary of key gene expression differences<br>
+<li>Results<br>
 </li>
-<li>Interpretation of sex-specific differences in DCM<br>
+<li>Discussion<br>
 </li>
-<li>Discussion of limitations and biological meaning</li>
+<li>References</li>
+</ul></li>
+<li><strong>Key figures/tables</strong>
+<ul>
+<li>PCA plot<br>
+</li>
+<li>UMAP plot<br>
+</li>
+<li>Volcano plots<br>
+</li>
+<li>PC1 distribution plot<br>
+</li>
+<li>KEGG pathway enrichment plot</li>
+</ul></li>
+<li><strong>Any optional stretch goals</strong>
+<ul>
+<li>Heatmap of differentially expressed genes<br>
+</li>
+<li>Additional pathway comparisons<br>
+</li>
+<li>Interactive visualizations using Plotly</li>
+</ul></li>
 </ul>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->

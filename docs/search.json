@@ -4,42 +4,35 @@
     "href": "proposal.html",
     "title": "Proposal",
     "section": "",
-    "text": "How does gene expression differ between male and female patients with dilated cardiomyopathy (DCM), and which biological pathways are most affected?\n\n\n\n\n\nSource: Gene Expression Omnibus (GEO), dataset GSE141910\nDataset description: RNA sequencing of left ventricle tissue from non-failing donors and heart failure samples from the MAGNet consortium\n\nSample size: 305 total samples\n\nNon-failing: 152 samples\n\n70 males\n\n82 females\n\n\nDCM: 153 samples\n\n92 males\n\n61 females\n\n\n\nKey variables: Sex, disease condition, and RNA-seq gene expression levels\n\nLicense/usage notes: Publicly available dataset for research use through GEO\n\n\n\n\n\nThe analysis pipeline includes:\n\nFiltering low-count genes\n\nLog transformation of counts\n\nPrincipal Component Analysis (PCA)\n\nUMAP clustering\n\nDifferential gene expression analysis using limma\n\nVolcano plot visualization\n\nSex-based comparison of DCM samples\n\nKEGG pathway enrichment analysis\n\n\n\n\n\n\nPCA plot comparing control and DCM samples by sex\n\nUMAP plot showing nonlinear clustering patterns\n\nVolcano plot comparing female vs male DCM samples\n\nVolcano plot comparing female vs male control samples\n\nPC1 distribution plot showing major variation across groups\n\nKEGG pathway summary plot for Female DCM vs Male DCM\n\n\n\n\n\n\nA Quarto website presenting the project results\n\nFigures including PCA, UMAP, volcano plots, PC1 distribution, and KEGG pathway plot\n\nSummary of key gene expression differences\n\nInterpretation of sex-specific differences in DCM\n\nDiscussion of limitations and biological meaning"
+    "text": "Dilated cardiomyopathy (DCM) is a complex heart disease influenced by both genetic and environmental factors. In this project, we analyze publicly available RNA-seq data to evaluate how gene expression differs between male and female patients with DCM and identify the biological pathways most affected by disease and sex differences."
   },
   {
     "objectID": "proposal.html#research-question",
     "href": "proposal.html#research-question",
     "title": "Proposal",
     "section": "",
-    "text": "How does gene expression differ between male and female patients with dilated cardiomyopathy (DCM), and which biological pathways are most affected?"
+    "text": "Dilated cardiomyopathy (DCM) is a complex heart disease influenced by both genetic and environmental factors. In this project, we analyze publicly available RNA-seq data to evaluate how gene expression differs between male and female patients with DCM and identify the biological pathways most affected by disease and sex differences."
   },
   {
-    "objectID": "proposal.html#dataset",
-    "href": "proposal.html#dataset",
+    "objectID": "proposal.html#datasets",
+    "href": "proposal.html#datasets",
     "title": "Proposal",
-    "section": "",
-    "text": "Source: Gene Expression Omnibus (GEO), dataset GSE141910\nDataset description: RNA sequencing of left ventricle tissue from non-failing donors and heart failure samples from the MAGNet consortium\n\nSample size: 305 total samples\n\nNon-failing: 152 samples\n\n70 males\n\n82 females\n\n\nDCM: 153 samples\n\n92 males\n\n61 females\n\n\n\nKey variables: Sex, disease condition, and RNA-seq gene expression levels\n\nLicense/usage notes: Publicly available dataset for research use through GEO"
+    "section": "2 Dataset(s)",
+    "text": "2 Dataset(s)\n\nSource: Gene Expression Omnibus (GEO), dataset GSE141910\n\nSample size: 305 total samples\n\nNon-failing: 152 (70 males, 82 females)\n\nDCM: 153 (92 males, 61 females)\n\n\nKey variables: Sex, disease condition (DCM vs control), RNA-seq gene expression levels\n\nLicense/usage notes: Publicly available dataset for research use through GEO"
   },
   {
     "objectID": "proposal.html#planned-analysis",
     "href": "proposal.html#planned-analysis",
     "title": "Proposal",
-    "section": "",
-    "text": "The analysis pipeline includes:\n\nFiltering low-count genes\n\nLog transformation of counts\n\nPrincipal Component Analysis (PCA)\n\nUMAP clustering\n\nDifferential gene expression analysis using limma\n\nVolcano plot visualization\n\nSex-based comparison of DCM samples\n\nKEGG pathway enrichment analysis"
-  },
-  {
-    "objectID": "proposal.html#expected-visualizations",
-    "href": "proposal.html#expected-visualizations",
-    "title": "Proposal",
-    "section": "",
-    "text": "PCA plot comparing control and DCM samples by sex\n\nUMAP plot showing nonlinear clustering patterns\n\nVolcano plot comparing female vs male DCM samples\n\nVolcano plot comparing female vs male control samples\n\nPC1 distribution plot showing major variation across groups\n\nKEGG pathway summary plot for Female DCM vs Male DCM"
+    "section": "3 Planned analysis",
+    "text": "3 Planned analysis\n\nCleaning/QC\n\nFilter low-count genes to reduce noise\n\nNormalize and log-transform gene expression data\n\nVisualizations\n\nPrincipal Component Analysis (PCA) to assess global variation\n\nUMAP to visualize clustering patterns\n\nVolcano plots for differential gene expression\n\nPC1 distribution plots\n\nStatistical/ML approach\n\nDifferential gene expression analysis using the limma package\n\nIdentify significantly upregulated and downregulated genes\n\nKEGG pathway enrichment analysis to identify biological pathways\n\nHow you’ll validate\n\nCompare multiple groups (DCM vs control, male vs female)\n\nEvaluate consistency across PCA and UMAP clustering\n\nUse adjusted p-values (FDR) to control for multiple testing"
   },
   {
     "objectID": "proposal.html#deliverables",
     "href": "proposal.html#deliverables",
     "title": "Proposal",
-    "section": "",
-    "text": "A Quarto website presenting the project results\n\nFigures including PCA, UMAP, volcano plots, PC1 distribution, and KEGG pathway plot\n\nSummary of key gene expression differences\n\nInterpretation of sex-specific differences in DCM\n\nDiscussion of limitations and biological meaning"
+    "section": "4 Deliverables",
+    "text": "4 Deliverables\n\nWebsite sections\n\nIntroduction\n\nMethods\n\nResults\n\nDiscussion\n\nReferences\n\nKey figures/tables\n\nPCA plot\n\nUMAP plot\n\nVolcano plots\n\nPC1 distribution plot\n\nKEGG pathway enrichment plot\n\nAny optional stretch goals\n\nHeatmap of differentially expressed genes\n\nAdditional pathway comparisons\n\nInteractive visualizations using Plotly"
   },
   {
     "objectID": "results.html",
