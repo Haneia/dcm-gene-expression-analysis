@@ -2,6 +2,15 @@
 title: "RNAseq Analysis using GSE141910"
 subtitle: "Exploring gene expression differences in dilated cardiomyopathy (DCM) with a focus on sex-specific effects"
 ---
+## Abstract 
+
+Dilated cardiomyopathy (DCM) is a major cause of heart failure characterized by ventricular dilation and impaired contractile function. Despite advances in clinical management, the molecular mechanisms underlying DCM remain incompletely understood, particularly with respect to sex-specific differences in disease progression. This study uses RNA sequencing (RNA-seq) data from the publicly available GSE141910 dataset to investigate gene expression differences between DCM and non-failing human heart tissue, with a specific focus on identifying sex-based transcriptional variation.
+
+The dataset consists of 305 left ventricular samples, including 153 DCM and 152 non-failing controls, with representation from both male and female patients. Gene expression data were preprocessed through filtering and normalization steps before applying dimensionality reduction techniques such as Principal Component Analysis (PCA) and Uniform Manifold Approximation and Projection (UMAP) to assess global expression patterns. Differential gene expression analysis was performed using the limma package in R, followed by visualization through volcano plots. Additionally, KEGG pathway enrichment analysis was conducted to identify biological pathways associated with sex-specific differences in DCM.
+
+Results show that disease status is the primary driver of gene expression variation, with DCM samples exhibiting distinct transcriptional profiles compared to controls. While sex-based differences were modest overall, they were more pronounced within the DCM group, suggesting that disease conditions may amplify underlying biological differences between males and females. Pathway enrichment analysis revealed significant involvement of inflammatory signaling, metabolic processes, and cardiac remodeling pathways, highlighting key mechanisms contributing to disease progression.
+
+Overall, this study demonstrates that RNA-seq analysis can uncover both disease-specific and sex-specific transcriptional changes in DCM. These findings provide insight into the molecular basis of DCM and emphasize the importance of considering sex as a biological variable in cardiovascular research. Understanding these differences may contribute to more personalized therapeutic strategies and improved clinical outcomes for patients with DCM.
 
 ## Introduction
 
