@@ -34,6 +34,22 @@ Which genes and molecular pathways differ between males and females with dilated
 
 DCM hearts show distinct gene expression and pathway changes compared to non-failing hearts, with stronger inflammatory and remodeling signals. These effects are expected to differ between males and females.
 
+## Discussion 
+
+This study demonstrates that dilated cardiomyopathy is associated with substantial changes in gene expression, with disease status acting as the dominant driver of transcriptional variation. This aligns with previous findings showing that DCM is characterized by widespread molecular remodeling involving inflammation, fibrosis, and altered metabolic activity.
+
+While sex alone did not strongly separate samples in global analyses such as PCA, differences became more apparent within the DCM group. This suggests that disease conditions may amplify underlying biological differences between males and females. Prior studies have reported that sex hormones, immune responses, and metabolic regulation differ between males and females, which may contribute to variations in disease progression and severity.
+
+The KEGG pathway analysis further supports this interpretation, highlighting pathways related to inflammation and metabolism. These findings are consistent with existing literature showing that chronic inflammation and metabolic dysregulation play central roles in heart failure and cardiomyopathy.
+
+Importantly, this study adds to the growing body of evidence that sex-specific differences in cardiovascular disease are context-dependent and may only become apparent under pathological conditions. This reinforces the need to incorporate sex as a key variable in both research and clinical decision-making. Overall, the results provide new insight into how gene expression patterns differ in DCM and suggest that sex-specific mechanisms may contribute to disease progression through distinct biological pathways.
+
+
+## Limitations
+This study has several limitations. First, the analysis was performed using bulk RNA-seq data, which does not capture cell-type-specific gene expression differences within the heart. As a result, observed changes may reflect shifts in cell composition rather than true transcriptional differences. Second, variability in patient characteristics such as age, comorbidities, and treatment history may introduce confounding effects that are not fully accounted for. Additionally, while statistical methods identify significant gene expression changes, they do not establish causality. Finally, the dataset includes an unequal distribution of male and female samples, which may influence the detection of sex-specific effects.
+
+## Future Work
+Future studies should incorporate single-cell RNA sequencing to better understand cell-type-specific contributions to DCM and uncover more precise mechanisms driving disease progression. Expanding analyses to include additional datasets would improve generalizability and allow for validation of findings. Further investigation into specific genes identified in this study could provide insight into potential therapeutic targets. Additionally, integrating other data types such as proteomics or epigenomics may help build a more comprehensive understanding of DCM biology. Finally, exploring how sex-specific differences influence treatment response could contribute to the development of more personalized approaches to cardiovascular care.
 
 ## References
 
